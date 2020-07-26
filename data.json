@@ -1,0 +1,24 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "avatar_url": "http://aaaaaa",
+      "nome": "aaaaa",
+      "nascimento": 660960000000,
+      "escolaridade": "EnsinoMedio",
+      "aula": "À distância",
+      "atuacao": "aaaa, aaa",
+      "created_at": 1595769702951
+    },
+    {
+      "id": 2,
+      "avatar_url": "http://aaaaaa",
+      "nome": "aa",
+      "nascimento": 660960000000,
+      "escolaridade": "EnsinoMedio",
+      "aula": "À distância",
+      "atuacao": "aa",
+      "created_at": 1595769852632
+    }
+  ]
+}
