@@ -2,6 +2,7 @@
 
 :root  {
     --background-color: #363636;
+    --background-color-header: #4F4F4F;
 }
 
 * {
@@ -16,7 +17,7 @@ body {
 }
 
 header {
-    background-color: #4F4F4F;
+    background-color: var(--background-color-header);
     width: 100%;
     padding: 32px;
     text-align: center;
@@ -59,4 +60,72 @@ header {
 .links a:hover::after {
     width: 100%;
     transition: width 300ms ease-in-out;   
+}
+
+/* Card */
+.card {
+    background-color: white;
+    width: 800px;
+    min-width: 400px;
+    margin: 45px auto;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    box-shadow: 0px 2px 6px -2px rgba(0, 0, 0, 0.5);
+    animation: up 200ms ease;
+}
+
+@keyframes up {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Details */
+.details {
+    padding: 32px;
+}
+
+.details .item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 16px 0;
+}
+
+.details .item:last-child {
+    border: none;
+}
+
+.details h3,
+.details .item div:nth-child(1) {
+    font-size: 14px;
+    line-height: 24px;
+    color: #777;
+    letter-spacing: 0.7px;
+    font-weight: normal;
+}
+
+.details .item div:nth-child(2) {
+    color: #555;    
+}
+
+.details h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--background-color);
+}
+
+.details .item div:nth-child(2) span {
+    padding: 8px 16px;
+    background-color: var(--background-color-header);
+    border-radius: 16px;
+    color: #DCDCDC;
+    margin-right: 4px;
+    margin-top: 8px;
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
 }
