@@ -1,5 +1,27 @@
 const fs = require('fs');
 const data = require('./data.json');
+const { age, graduation, date } = require('./utils');
+
+// show
+exports.show = function(req, res) {
+    const { id } = req.params;
+
+    const foundTeacher = data.teachers.find(function(teacher) {
+        return teacher.id == id
+    });
+
+    if (!foundTeacher) return res.send("Teacher not found");
+
+    const teacher = {
+        ...foundTeacher,
+        birth: age(foundTeacher.birth),
+        graduation: graduation(foundTeacher.graduation),
+        occupation_area: foundTeacher.occupation_area.split(","),
+        created_at: new Intl.DateTimeFormat('pt-BR').format(foundTeacher.created_at),
+    }
+
+    return res.render("teachers/show", { teacher });
+}
 
 // create
 exports.post = function(req, res) {
@@ -11,10 +33,10 @@ exports.post = function(req, res) {
         }
     }
 
-    let {avatar_url, nome, nascimento, escolaridade, aula, atuacao} = req.body;
+    let {avatar_url, name, birth, graduation, type_class, occupation_area} = req.body;
 
 
-    nascimento = Date.parse(nascimento);
+    birth = Date.parse(birth);
     const created_at = Date.now();
     const id = Number(data.teachers.length + 1);
 
@@ -22,11 +44,11 @@ exports.post = function(req, res) {
     data.teachers.push({
         id,
         avatar_url,
-        nome,
-        nascimento,
-        escolaridade,
-        aula,
-        atuacao,
+        name,
+        birth,
+        graduation,
+        type_class,
+        occupation_area,
         created_at
     });
 
@@ -36,4 +58,22 @@ exports.post = function(req, res) {
     });
 
     // return res.send(req.body);
+}
+
+// 
+exports.edit = function(req, res) {
+    const { id } = req.params;
+    
+    const foundTeacher = data.teachers.find(function(teacher) {
+        return teacher.id == id
+    });
+
+    if (!foundTeacher) return res.send("Teacher not found");
+
+    const teacher = {
+        ...foundTeacher,
+        birth: date(foundTeacher.birth)
+    }
+
+    return res.render('teachers/edit', { teacher });
 }
