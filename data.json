@@ -1,44 +1,14 @@
 {
   "teachers": [
     {
-      "id": 1,
-      "avatar_url": "http://aaaaaa",
-      "name": "aaaaaa",
-      "birth": 639878400000,
-      "graduation": "Medio",
-      "type_class": "À distância",
-      "occupation_area": "teste, aa, eee",
-      "created_at": 1596439185451
-    },
-    {
-      "id": 2,
-      "avatar_url": "https://images.unsplash.com/photo-1561089489-f13d5e730d72?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80",
-      "name": "Teacher teste",
-      "birth": 798249600000,
+      "id": "1",
+      "avatar_url": "https://images.unsplash.com/photo-1511629091441-ee46146481b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "name": "Teacher 1",
+      "birth": 368236800000,
       "graduation": "Doutorado",
       "type_class": "Presencial",
-      "occupation_area": "História, Inglês, Holandês, Italiano",
-      "created_at": 1596477307574
-    },
-    {
-      "id": 3,
-      "avatar_url": "https://images.unsplash.com/photo-1561089489-f13d5e730d72?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80",
-      "name": "aaaaa",
-      "birth": -27080352000000,
-      "graduation": "Medio",
-      "type_class": "À distância",
-      "occupation_area": "aaa,aa,aa",
-      "created_at": 1596479267382
-    },
-    {
-      "id": 4,
-      "avatar_url": "http://aaaaaa",
-      "name": "aaaaaa",
-      "birth": 639878400000,
-      "graduation": "Medio",
-      "type_class": "À distância",
-      "occupation_area": "teste, aa, eee",
-      "created_at": 1596481060983
+      "occupation_area": "Português, Inglês, Holandês, Italiano",
+      "created_at": 1596980022348
     }
   ]
 }
