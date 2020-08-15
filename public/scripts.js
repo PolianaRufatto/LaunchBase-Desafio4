@@ -1,10 +1,7 @@
-const modalOverlay = document.querySelector('.modal-overlay');
-const cards = document.querySelectorAll('.card');
-
-
-for (let card of cards) {
-    card.addEventListener("click", function(){
-        const videoId = card.getAttribute('id');
-        window.location.href = `/video?id=${videoId}`
-    })
-}
+const formDelete = document.querySelector('#form-delete');
+formDelete.addEventListener("submit", function(event){
+    const confirmation = confirm("Deseja deletar?");
+    if (!confirmation) {
+        event.preventDefault();
+    }
+});
